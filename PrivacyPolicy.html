@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sparelux · Privacy</title>
+  <style>
+    :root {
+      --ink: #0f1418;
+      --lift: #181e26;
+      --panel: #222a34;
+      --line: #3a4554;
+      --steel: #3a6b8c;
+      --steel-lite: #5a8fb0;
+      --sand: #d2d8de;
+      --mist: #9aa6b4;
+      --hush: #667484;
+      --amber: #c4a056;
+      --coral: #a85a48;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      color: var(--sand);
+      background: var(--ink);
+      font: 16px/1.55 GillSans, "Gill Sans", "Segoe UI", "Helvetica Neue", sans-serif;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      background:
+        linear-gradient(115deg, transparent 62%, rgba(58, 107, 140, 0.18) 62%, rgba(58, 107, 140, 0.18) 64%, transparent 64%),
+        linear-gradient(180deg, #121820 0%, var(--ink) 42%, #0b0f13 100%);
+    }
+
+    .wrap {
+      position: relative;
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 2.4rem 1.25rem 4.5rem;
+      overflow: hidden;
+    }
+
+    .wrap::after {
+      content: "SHELF";
+      position: absolute;
+      top: 4.5rem;
+      right: -0.15em;
+      font-size: clamp(5rem, 28vw, 9rem);
+      font-weight: 800;
+      letter-spacing: -0.06em;
+      color: rgba(210, 216, 222, 0.035);
+      transform: rotate(90deg);
+      transform-origin: top right;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .stamp {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin-bottom: 1.1rem;
+      padding: 0.35rem 0.7rem 0.35rem 0.45rem;
+      border: 1px solid var(--line);
+      background: var(--lift);
+      transform: rotate(-1.2deg);
+    }
+
+    .stamp i {
+      width: 0.55rem;
+      height: 1.35rem;
+      background: var(--steel-lite);
+      display: block;
+    }
+
+    .stamp span {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--mist);
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0 0 0.35rem;
+      font-size: clamp(2rem, 7vw, 2.75rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .when {
+      margin: 0 0 1.6rem;
+      color: var(--hush);
+      font-size: 0.9rem;
+    }
+
+    .lede {
+      position: relative;
+      margin: 0 0 2rem;
+      padding: 1.1rem 1rem 1.1rem 1.15rem;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--amber);
+      clip-path: polygon(0 0, 100% 0, 97.5% 100%, 0 100%);
+      color: var(--sand);
+      font-size: 1.02rem;
+    }
+
+    .lede strong { color: #fff; }
+
+    section {
+      position: relative;
+      margin: 0 0 1.35rem;
+      padding: 1rem 1rem 1.05rem;
+      background: rgba(24, 30, 38, 0.92);
+      border: 1px solid var(--line);
+      border-radius: 4px 10px 4px 8px;
+    }
+
+    section:nth-of-type(even) {
+      border-radius: 10px 4px 8px 4px;
+      transform: translateX(2px);
+    }
+
+    .num {
+      display: inline-block;
+      margin-bottom: 0.45rem;
+      padding: 0.12rem 0.45rem;
+      background: var(--steel);
+      color: #fff;
+      font: 700 0.7rem/1 Menlo, Consolas, monospace;
+      letter-spacing: 0.04em;
+    }
+
+    h2 {
+      margin: 0 0 0.55rem;
+      font-size: 1.15rem;
+      color: #fff;
+      letter-spacing: -0.01em;
+    }
+
+    p { margin: 0 0 0.65rem; color: var(--mist); }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      margin: 0.35rem 0 0;
+      padding: 0 0 0 1.1rem;
+      color: var(--mist);
+    }
+
+    li { margin: 0.35rem 0; }
+
+    .cut {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.65rem;
+      margin: 1.4rem 0 1.8rem;
+    }
+
+    .cut b {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: var(--amber);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .cut div {
+      padding: 0.85rem 0.8rem;
+      background: var(--lift);
+      border: 1px dashed var(--line);
+      color: var(--mist);
+      font-size: 0.92rem;
+    }
+
+    .cut div:last-child {
+      border-style: solid;
+      border-color: var(--coral);
+      background: rgba(168, 90, 72, 0.12);
+    }
+
+    footer {
+      margin-top: 2.2rem;
+      padding-top: 1.1rem;
+      border-top: 1px solid var(--line);
+      color: var(--hush);
+      font-size: 0.88rem;
+    }
+
+    footer em {
+      font-style: normal;
+      color: var(--steel-lite);
+    }
+
+    @media (max-width: 520px) {
+      .cut { grid-template-columns: 1fr; }
+      section:nth-of-type(even) { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="stamp"><i></i><span>Sparelux crate</span></div>
+    <h1>Privacy,<br>no drama.</h1>
+    <p class="when">Effective Oct 24, 2026 · Sparelux for iPhone</p>
+
+    <p class="lede">
+      Sparelux is a <strong>local shelf for spare stuff</strong>.
+      Photos, price guesses, swap cards, pickup windows, and cash ticks live in the app folder on your phone.
+      There is <strong>no account</strong>, and this build does not upload your list to a Sparelux server.
+    </p>
+
+    <div class="cut">
+      <div>
+        <b>Stays here</b>
+        Item titles, notes, photos you attach, estimate ranges, handoff cards, ledger rows, nickname.
+      </div>
+      <div>
+        <b>Not a marketplace</b>
+        We do not broker buyers, move money, or message strangers for you. Your numbers are notes.
+      </div>
+    </div>
+
+    <section>
+      <span class="num">01</span>
+      <h2>What the app actually stores</h2>
+      <p>On this device only:</p>
+      <ul>
+        <li>Shelf items (title, category, wear, low/high, path, notes, optional photo file)</li>
+        <li>Estimate results you choose to put on the shelf</li>
+        <li>Swap cards and pickup notes you write in Circulate</li>
+        <li>Cash rows in Ledger and an optional nickname</li>
+      </ul>
+      <p>Text rows live in app preferences; photos sit in a private Documents subfolder. Delete a row to clear that row. Uninstalling Sparelux clears both.</p>
+    </section>
+
+    <section>
+      <span class="num">02</span>
+      <h2>Camera and photos</h2>
+      <p>Camera and photo library open only when you tap Take photo, From library, or Attach photo. Sparelux uses the image you pick so it can sit with that item. We do not scan your whole library in the background.</p>
+    </section>
+
+    <section>
+      <span class="num">03</span>
+      <h2>Network, accounts, ads</h2>
+      <p>Core use does not need a login or an online account. There is no Sparelux cloud for your shelf list and no analytics SDK in this build.</p>
+      <p>If the system shows a network prompt for OS updates or other tooling, that is outside Sparelux’s shelf data.</p>
+    </section>
+
+    <section>
+      <span class="num">04</span>
+      <h2>Kids and common sense</h2>
+      <p>Sparelux is a household clear-out notepad, not a social product for children. Do not put other people’s private contacts into notes if you would not want that text sitting in an unlocked phone.</p>
+    </section>
+
+    <section>
+      <span class="num">05</span>
+      <h2>Changes</h2>
+      <p>If this page changes, the date at the top moves. Keep using the app only if the new wording still fits how you want your spare-stuff list handled.</p>
+    </section>
+
+    <section>
+      <span class="num">06</span>
+      <h2>Contact</h2>
+      <p>Questions about this policy: use the App Store listing contact for Sparelux. We do not publish a mailing address on this page.</p>
+    </section>
+
+    <footer>
+      Sparelux · charcoal shelf notes · <em>your pile, your phone</em>
+    </footer>
+  </div>
+</body>
+</html>
